@@ -1,9 +1,21 @@
-# Challenge Data Engineer for Rappi - 2021
+**Challenge Data Engineer for Rappi - 2021**
 
 - **Developer:** COLLANTE, Gerardo
-- **Date**: 20/6/21
+- **Date**: 25/6/21
 
 The challenge can be read in `Rappi - Data Engineering Challenge.pdf`.
+
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Jupyter Notebook](#jupyter-notebook)
+    - [Python File](#python-file)
+      - [Just run](#just-run)
+      - [Interactive terminal](#interactive-terminal)
+  - [Results](#results)
+    - [Ranking](#ranking)
+    - [Data Analysis](#data-analysis)
 
 ## Getting Started
 
@@ -56,7 +68,7 @@ Run `.py` file:
 
 ### Ranking
 
-| ranking | store | revenue | pct_cc   | pct_cash | aov   |
+| ranking | store | revenue [USD] | pct_cc   | pct_cash | aov [USD]  |
 |---------|-------|---------|----------|----------|-------|
 | 1       | 1     | 64439   | 92,27 %  | 7,73 %   | 9,94  |
 | 2       | 13    | 6862    | 86,27 %  | 13,73 %  | 5,48  |
