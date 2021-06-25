@@ -7,6 +7,9 @@ __pycache__/
 
 # Folders
 rappi_env
+.vscode/
+input
+output
 
 # Distribution / packaging
 .Python
