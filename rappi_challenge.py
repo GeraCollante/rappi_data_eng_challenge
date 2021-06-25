@@ -322,7 +322,7 @@ if __name__ == "__main__":
     print(f"Product DataFrame saved at {output_path}.")
 
     # Time series
-    print("Time series.")
+    print("Time Series.")
     ts = df.set_index(df.created)
     # Compute DataFrames
     t = "1H"
