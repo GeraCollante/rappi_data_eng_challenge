@@ -10,6 +10,7 @@ rappi_env
 .vscode/
 input
 output
+currency
 
 # Distribution / packaging
 .Python
