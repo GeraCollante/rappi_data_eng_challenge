@@ -64,7 +64,7 @@ def get_usd_symbol(date: str) -> float:
     try:
         response = requests.get(url, timeout=3)
         response.raise_for_status()
-        usd = response.json()['rates'][symbol]
+        usd = response.json()['rates'][SYMBOL]
     except requests.exceptions.HTTPError as errh:
         print("Http Error: ", errh)
     except requests.exceptions.ConnectionError as errc:
@@ -266,13 +266,13 @@ if __name__ == "__main__":
     print("Computed revenues per store.")
     pct_by_pay_cc = get_pct_by_pay_method('cc')
     pct_by_pay_cash = get_pct_by_pay_method('cash')
-    print("Computed percentage of pay per store")
+    print("Computed percentage of pay per store.")
     aov = get_aov_per_store()
-    print("Computed AOV per store")
+    print("Computed AOV per store.")
 
     # Create ranking
     ranking_df = pd.concat([revenue, pct_by_pay_cc, pct_by_pay_cash, aov], axis=1).fillna(0)
-    print("Ranking created")
+    print("Ranking created.")
 
     # Sort
     ranking_df.sort_values(by='revenue', ascending=False)
@@ -280,10 +280,10 @@ if __name__ == "__main__":
 
     # Store result
     output_path = save_csv(ranking_df, 'ranking.csv')
-    print(f"Ranking saved at {output_path}")
+    print(f"Ranking saved at {output_path}.")
 
     # Product Analysis
-    print("Product Data Analysis")
+    print("Product Data Analysis.")
     # Create DataFrames
     producto_total = df.groupby(by='producto').total.sum().to_frame()
     producto_dist = df.groupby(by='producto').dist.mean().to_frame()
@@ -291,14 +291,15 @@ if __name__ == "__main__":
 
     # Concat
     producto_df = pd.concat([producto_total, producto_dist, producto_orders], axis=1)
-    print("Created Product DataFrame")
+    print("Created Product DataFrame.")
     output_path = save_csv(producto_df, 'producto_df.csv')
-    print(f"Product DataFrame saved at {output_path}")
+    print(f"Product DataFrame saved at {output_path}.")
 
     # Time series
-    print("")
+    print("Time series.")
     ts = df.set_index(df.created)
     # Compute DataFrames
     t = '1H'
     ts_orders = ts.resample(t).order.count().to_frame()
     ts_total = ts.resample(t).total.sum().to_frame()
+    print("Created time series.")

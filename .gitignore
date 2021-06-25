@@ -8,7 +8,7 @@ __pycache__/
 # Folders
 rappi_env
 .vscode/
-input
+.idea/
 output
 currency
 
