@@ -54,12 +54,15 @@ Run `.py` file:
 
 ------------
 
+- **AOV:** It shows the AOV, in green those that are above the average and in red those that are below.
+![ord_vs_revenue](img/revenue_per_store_and_payment_method.png "Orders vs distance per product.")
+
 - **Percentage of payment method per store:** It allows to quickly identify the stores that most use cash or cc.
 ![ord_vs_revenue](img/percentage_of_payment_method_per_store.png "Orders vs distance per product.")
 
 - **Time Series**: The peaks of activity both in the number of orders and in billing occurs between 6:00 p.m. and 8:00 p.m., drastically decreasing in the early hours of the morning. Flash promotions would be beneficial to perform at that time but the availability of rappis is unknown.
 ![ord_vs_revenue](img/orders_vs_revenue_across_time.png "Orders vs distance per product.")
 
-- **AOV**: We must focus on products with a large number of orders and prices, but which are far away, proposing strategically located warehouses to reduce delivery time., In this case we must focus on products with lots of orders and price, but they are far, proposing deposits located strategically to reduce delivery time.
+- **Orders vs distance per product**: We must focus on products with a large number of orders and prices, but which are far away, proposing strategically located warehouses to reduce delivery time., In this case we must focus on products with lots of orders and price, but they are far, proposing deposits located strategically to reduce delivery time.
 
 ![ord_vs_dist](img/orders_vs_distance_per_product.png "Orders vs distance per product.")
