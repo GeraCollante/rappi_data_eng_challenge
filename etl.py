@@ -19,9 +19,10 @@ def save_csv(df: pd.DataFrame, output_dir: str, filename: str) -> str:
 
     Returns
     ---------
-    None
+    filepath : str
+        Absolute
     """
-    filepath = os.path.join(output_dir, filename)
+    filepath: str = os.path.join(output_dir, filename)
     df.to_csv(filepath)
     return filepath
 
@@ -74,9 +75,7 @@ def get_pct_by_pay_method(df: pd.DataFrame, pay_method: str) -> pd.DataFrame:
     )
 
     # Match total and revenue per pay method
-    temp_df = pd.concat([revenue_per_store, revenue_per_store_filtered], axis=1).fillna(
-        0
-    )
+    temp_df = pd.concat([revenue_per_store, revenue_per_store_filtered], axis=1).fillna(0)
 
     # Get final df
     pct_by_pay_method = (
@@ -93,7 +92,8 @@ def get_orders_per_store(df: pd.DataFrame) -> pd.DataFrame:
 
     Parameters
     ----------
-
+    df : pd.DataFrame
+        Original
     Returns
     ---------
     pd.DataFrame

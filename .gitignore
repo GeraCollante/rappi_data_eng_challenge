@@ -5,6 +5,9 @@ __pycache__/
 # C extensions
 *.so
 
+# API pass
+api_pass.txt
+
 # Folders
 rappi_env
 .vscode/

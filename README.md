@@ -46,21 +46,21 @@ Create docker image from `Dockerfile` (in this case name of the image is `rappi-
 
 `sudo docker build -t rappi-challenge .`
 
-#### Just run
-
-Only run docker conteiner:
-
-`docker run -ti rappi-challenge`
-
 #### Interactive terminal
 
-Run docker conteiner with interactive terminal:
+Run docker container with interactive terminal:
 
 `docker run -ti rappi-challenge /bin/bash`
 
 Run `.py` file:
 
-`python rappi-challenge.py`
+`python main.py`
+
+#### Just run
+
+Only run bash script:
+
+`sh docker-run.sh`
 
 ## Results
 

@@ -49,6 +49,7 @@ if __name__ == "__main__":
     currency_df = create_currency_df(df)
 
     # Compute value for each row in df
+    # COP to USD
     df["total"] = df.apply(
         lambda x: usd_currency(
             currency_df, x["total"], x["created"].strftime("%Y-%m-%d")
@@ -59,7 +60,6 @@ if __name__ == "__main__":
 
     # Compute DataFrames
     revenue = get_revenue_per_store(df)
-    print(revenue.head(10))
     print("Computed revenues per store.")
     pct_by_pay_cc = get_pct_by_pay_method(df, "cc")
     pct_by_pay_cash = get_pct_by_pay_method(df, "cash")

@@ -3,9 +3,34 @@ import numpy as np
 import pandas as pd
 import os
 
-APP_ID = "d2847e56a8474a9fb4416b519b1447ce"
+API_FILE = 'api_pass.txt'
 SYMBOL = "COP"
 CURRENCY_DIR = "currency"
+
+
+def get_api_id(filename: str) -> str:
+    """
+    Parameters
+    ----------
+    filename : str
+        File that contains API_ID
+
+    Returns
+    -------
+    API_ID : str
+    """
+    try:
+        with open(filename, 'r') as API:
+            app_id = API.read()
+    except FileNotFoundError:
+        print('API file does not exist.')
+    return app_id
+
+
+# Load APP_ID from file
+# Security in this project not considered
+API_ID = get_api_id(API_FILE)
+print("API_ID loaded.")
 
 
 def get_usd_symbol(date: str) -> float:
@@ -22,7 +47,7 @@ def get_usd_symbol(date: str) -> float:
     float
         Currency USD/[symbol].
     """
-    url = f"https://openexchangerates.org/api/historical/{date}.json?app_id={APP_ID}&symbols={SYMBOL}&prettyprint=false"
+    url = f"https://openexchangerates.org/api/historical/{date}.json?app_id={API_ID}&symbols={SYMBOL}&prettyprint=false"
     usd = np.nan
 
     try:
