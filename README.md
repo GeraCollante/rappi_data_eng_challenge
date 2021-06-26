@@ -58,9 +58,13 @@ Run `.py` file:
 
 #### Just run
 
-Only run bash script:
+Only run bash script and interactive terminal will be open:
 
 `sh docker-run.sh`
+
+Run `.py` file:
+
+`python main.py`
 
 ## Results
 
