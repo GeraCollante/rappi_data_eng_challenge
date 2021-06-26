@@ -6,7 +6,8 @@ __pycache__/
 *.so
 
 # API pass
-api_pass.txt
+@TODO SECURITY WARNING: DON'T UPLOAD PASSWORD
+# api_pass.txt
 
 # Folders
 rappi_env
