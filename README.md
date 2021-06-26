@@ -11,8 +11,8 @@ The challenge can be read in `Rappi - Data Engineering Challenge.pdf`.
   - [Getting Started](#getting-started)
     - [Jupyter Notebook](#jupyter-notebook)
     - [Python File](#python-file)
-      - [Just run](#just-run)
       - [Interactive terminal](#interactive-terminal)
+      - [Just run](#just-run)
   - [Results](#results)
     - [Ranking](#ranking)
     - [Data Analysis](#data-analysis)
@@ -44,7 +44,7 @@ Open the notebook:
 
 Create docker image from `Dockerfile` (in this case name of the image is `rappi-challenge`):
 
-`sudo docker build -t rappi-challenge .`
+`docker build -t rappi-challenge .`
 
 #### Interactive terminal
 
