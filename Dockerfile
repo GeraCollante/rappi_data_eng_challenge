@@ -9,6 +9,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Run the application:
-COPY rappi_challenge.py .
+COPY main.py .
+COPY etl.py .
+COPY currency.py .
 ADD input input
-CMD ["python", "rappi_challenge.py"]
+CMD ["python", "main.py"]
